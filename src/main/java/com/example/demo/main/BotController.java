@@ -22,7 +22,10 @@ public class BotController {
     @SneakyThrows
     public void sendNotification(@RequestBody Map notificationInfo) {
         notificationSenderBot.sendNotification(Long.valueOf(((Integer)notificationInfo.get("chatId"))),
-                (String) notificationInfo.get("notificationText"));
+                 "*" + notificationInfo.get("notificationTextPartOne") + "* \n"
+                         + notificationInfo.get("notificationTextPartTwo") + "\n"
+                         + "Notification URL: https://cimdemo.stage.xm-online.com/application/RESOURCE"
+        );
     }
 }
 

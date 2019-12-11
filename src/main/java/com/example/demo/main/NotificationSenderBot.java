@@ -56,6 +56,7 @@ public class NotificationSenderBot extends TelegramLongPollingBot {
         SendMessage s = new SendMessage();
         s.setChatId(chatId);
         s.setText(notification);
+        s.setParseMode("markdown");
         sendApiMethod(s);
     }
 }
