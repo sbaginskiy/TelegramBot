@@ -24,7 +24,7 @@ public class BotController {
         notificationSenderBot.sendNotification(Long.valueOf(((Integer)notificationInfo.get("chatId"))),
                  "*" + notificationInfo.get("notificationTextPartOne") + "* \n"
                          + notificationInfo.get("notificationTextPartTwo") + "\n"
-                         + "Notification URL: https://cimdemo.stage.xm-online.com/application/RESOURCE"
+                         + "Please click <a href=\"https://cimdemo.stage.xm-online.com\" target="_blank">here</a> to get more details."
         );
     }
 }
