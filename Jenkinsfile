@@ -1,6 +1,10 @@
 pipeline {
     agent any
-
+    node {
+     withGradle {
+       sh './gradlew build'
+      }
+    }
     stages {
         stage('Build') {
             steps {
